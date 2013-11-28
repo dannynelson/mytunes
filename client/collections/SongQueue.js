@@ -17,7 +17,7 @@ MyTunes.Collections.SongQueue = MyTunes.Collections.Songs.extend({
   },
 
   removeFirst: function() {
-    this.get(0).remove();
+    this.remove(this.at(0));
   }
 
 });
