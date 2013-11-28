@@ -10,14 +10,16 @@ MyTunes.Collections.SongQueue = MyTunes.Collections.Songs.extend({
   },
 
   checkFirst: function() {
+    // if it is the first in the array, playIt
     if (this.length === 1) this.playFirst();
   },
 
-  playFirst: function() {
+  removeFirst: function() {
+    this.shift();
+    if (this.length) this.playFirst();
   },
 
-  removeFirst: function() {
-    this.remove(this.at(0));
+  playFirst: function() {
   }
 
 });
